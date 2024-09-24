@@ -91,7 +91,7 @@ jobs:
           argocd cluster add k3d-cluster-teste-overview-central --server argocd.apr.vee.codes --auth-token ${{ secrets.ARGOCD_TOKEN }}
         
       - name: Upload kube config
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: kube-config
           path: ~/.kube/config
@@ -222,7 +222,7 @@ jobs:
         
     ### Usin k8s context
       - name: Download kubeconfig artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: kube-config
           path: ~/.kube
@@ -275,7 +275,7 @@ jobs:
  
     ### Usin k8s context
       - name: Download kubeconfig artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: kube-config
           path: ~/.kube
