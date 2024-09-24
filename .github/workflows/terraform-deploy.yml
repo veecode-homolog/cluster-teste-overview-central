@@ -114,6 +114,10 @@ jobs:
           name: component-catalog
           path: .platform/component.yaml
 
+      - name: sleep 2
+        run: |
+          sleep 2
+
   service-account:
     name: Service Account Configuration
     runs-on: ubuntu-latest
