@@ -70,7 +70,7 @@ jobs:
 
       - name: Generate kube config with k3d
         run: |
-           ssh -i ./cert.pem -o StrictHostKeyChecking=no $USERNAME@${{  env.Host }} "k3d kubeconfig get k3s > config"
+           ssh -i ./cert.pem -o StrictHostKeyChecking=no $USERNAME@${{  env.Host }} "k3d kubeconfig get cluster-teste-overview-central > config"
  
       - name: Download kube config
         run: |
